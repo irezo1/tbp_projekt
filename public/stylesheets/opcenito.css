@@ -1,0 +1,232 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    color: white;
+    font-family: "Arial";
+    margin: 5px;
+
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 70px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 140px;
+    font-size: small;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+#obvijest {
+    width: 200px;
+    margin-left: 60px;
+}
+
+.k_kutija {
+    height: 100vh;
+    display: grid;
+    background-color: #494545;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 10px;
+}
+
+.k_header {
+    grid-row: 1;
+    max-width: 100%;
+    color: rgb(11, 179, 170);
+    background-color: #494545;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.k_navigacija {
+    grid-row: 2;
+    text-align: center;
+    background-color: #494545;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.k_sadrzaj {
+    grid-row: 3;
+    background-color: #494545;
+    color: #e528f7;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.k_footer {
+    grid-row: 4;
+    padding: 1rem;
+
+}
+
+#slika_logo {
+    width: 200px;
+    height: 112px;
+    border-radius: 15%;
+    grid-row: 1;
+    order: 1;
+
+}
+
+#naslov_stranice {
+    color: #e528f7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav>ul {
+    list-style: none;
+    width: auto;
+    line-height: 1;
+    list-style-type: none;
+}
+
+nav>ul li {
+    display: inline;
+}
+
+nav>ul li a {
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    color: #e528f7;
+    text-transform: uppercase;
+    padding: 8px 22px;
+}
+
+footer {
+    background-color: rgb(243, 31, 232);
+    text-align: center;
+}
+
+footer>address {
+    margin-top: 1px;
+}
+
+form {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    float: left;
+    width: 99%;
+}
+
+form#dodaj_putovanje {
+    width: 300px;
+    text-align: center;
+
+}
+
+form#dodaj_znamenitost {
+    width: 300px;
+    text-align: center;
+}
+
+h1#naslov_znamenitost_d {
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+h1#naslov_dodavanje_novog_p {
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: #e528f7;
+}
+
+a:hover {
+    color: blue;
+    background: #eaeaea;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+h1>a:visited,
+a:hover {
+    color: cornflowerblue;
+    background: none;
+}
+
+#naslov_stranice>a {
+    color: rgb(224, 34, 241);
+}
+
+#precac_ime {
+    color: black;
+}
+
+iframe {
+    margin: auto;
+    display: block;
+    margin-top: 60px;
+}
+
+#map {
+    height: 500px;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+
+@media only screen and (max-width: 1900px) {
+
+    nav>ul li a {
+        display: block;
+    }
+
+    .k_navigacija {
+        justify-content: center;
+    }
+}

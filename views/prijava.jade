@@ -1,0 +1,36 @@
+doctype html
+html(lang='hr')
+  head
+    title Iva Rezo
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='author' content='Iva Rezo')
+    meta(name='keywords' content='pracenje posjeta')
+    meta(name='description' content='Pracenje putovanja i znamenitosti')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/opcenito.css')
+  body.k_kutija
+    header.k_header
+      h1#naslov_stranice
+        a(href='/') EARTHRACE
+      a(href='/')
+        img#slika_logo(alt='Logo earthrace' src='/images/earth_race.jpeg')
+    nav.k_navigacija
+      ul
+        li
+          a(href='prijava') Prijava
+        li
+          a(href='registracija') Registracija
+    section#sadrzaj_pocetne.k_sadrzaj
+        h2 Prijava
+        form#prijava(name='prijava' method='post' action='/prijava')
+            label(for='email_ulaz') Email: 
+            input#email_ulaz(name='email_ulaz' type='email' required='required')
+            br
+            label(for='lozinka') Lozinka: 
+            input#lozinka(name='lozinka' type='password' required='required')
+            br
+            input(name='submit' type='submit' value='Prijavi se')
+    footer.k_footer
+      address
+        | Kontakt: Iva Rezo
+     

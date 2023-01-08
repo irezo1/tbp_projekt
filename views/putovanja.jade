@@ -1,0 +1,61 @@
+doctype html
+html(lang='hr')
+  head
+    title Iva Rezo
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='author' content='Iva Rezo')
+    meta(name='keywords' content='pracenje posjeta')
+    meta(name='description' content='Pracenje putovanja i znamenitosti')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/opcenito.css')
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity='sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=' crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js' integrity='sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=' crossorigin='')
+    script(src='/javascripts/rad_s_mapom.js')
+
+  body.k_kutija
+    header.k_header
+      h1#naslov_stranice
+        a(href='/') EARTHRACE
+      a(href='')
+        img#slika_logo(alt='Logo earthrace' src='/images/earth_race.jpeg')
+    nav.k_navigacija
+      ul
+        li
+          a(href='/') Početna
+        li
+          a(href='putovanja') Putovanja
+        li
+          a(href='pregledLokacija') Pregled Lokacija
+        li
+          a(href='odjava') Odjava
+    section#sadrzaj_pocetne.k_sadrzaj
+      <div id="map"></div>
+      h1#naslov_dodavanje_novog_p Dodavanje novog putovanja
+      form#dodaj_putovanje(name='dodaj_putovanje')
+        label(for='datum') Datum putovanja:
+        br
+        input#datum(name='datum' type='date' required='required')
+        br
+        input(name='submit' type='button' value='Dodaj putovanje' onclick="dodajUBazu()")
+      br
+      div#obavijest 
+      br
+      br
+      br
+      div#dodaj_znamenitost_div
+        h1#naslov_znamenitost_d Znamenitost za dodati
+        br
+        form#dodaj_znamenitost(name='dodaj_znamenitost')
+          h4 Država znamenitosti
+          select#lista.form-control(name='lista' onchange='dohvatiDrzavu()')
+          br
+          label(for='naziv') Naziv: 
+          br
+          input#naziv(name='naziv' type='text' required='required' size='15')
+          br
+          input(name='submit' type='button' value='Dodaj znamenitost' onclick="dodajUBazuZnamenitost()")
+        div#obavijest2
+    footer.k_footer
+      address
+        | Kontakt: Iva Rezo
+     
